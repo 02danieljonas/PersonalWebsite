@@ -1,0 +1,39 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaVersion": 2020,
+        "ecmaFeatures": {
+            "jsx": false
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "plugins": ["import", "@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "next",
+        "airbnb",
+        "airbnb-typescript",
+        "prettier"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "arrow-body-style": "warn",
+        "no-console": "warn",
+        "import/no-named-default": "error",
+        "react/react-in-jsx-scope": "off",
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["warn", "double"],
+        "semi": ["error", "always"],
+        "react/function-component-definition": [
+            "warn",
+            {
+                "namedComponents": "function-declaration"
+            }
+        ]
+    }
+}
