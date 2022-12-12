@@ -18,7 +18,6 @@ export default function Home() {
                 <h1 className={styles.title}>
                     Welcome to <a href="https://nextjs.org">Next.js!</a>
                 </h1>
-                <div className="text-right fixed top-0 tw-pb-96">Hello</div>
 
                 <p className={styles.description}>
                     Get started by editing{" "}
