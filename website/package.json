@@ -6,7 +6,10 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "tsc && npx next lint && npm run prettier",
+        "format": "eslint --fix src/**/*.{ts,tsx} && prettier --write src/**/*.{ts,tsx}",
+        "lint:prettier:write": "prettier --write src/**/*.{ts,tsx}",
+        "prettier": "prettier --check src/**/*.{ts,tsx}"
     },
     "dependencies": {
         "next": "13.0.6",
