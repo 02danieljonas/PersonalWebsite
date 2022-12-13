@@ -8,7 +8,6 @@
         "start": "next start",
         "lint": "tsc && npx next lint && npm run prettier",
         "format": "eslint --fix ./**/*.{ts,tsx,js} && prettier --write ./**/*.{ts,tsx,js}",
-        "lint:prettier:write": "prettier --write ./**/*.{ts,tsx,js}",
         "prettier": "prettier --check ./**/*.{ts,tsx,js}"
     },
     "dependencies": {
