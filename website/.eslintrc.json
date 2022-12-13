@@ -39,8 +39,20 @@
     "overrides": [
         {
             "files": ["cypress/**/*.ts"],
-            "parserOptions": { "project": null }
+            "parserOptions": {
+                "project": "./cypress/tsconfig.json"
+            },
+            "rules": {
+                "@typescript-eslint/no-namespace": "off",
+                "import/no-extraneous-dependencies": [
+                    "off",
+                    {
+                        "devDependencies": false,
+                        "optionalDependencies": false,
+                        "peerDependencies": false
+                    }
+                ]
+            }
         }
     ]
 }
-
