@@ -2,6 +2,6 @@
     "tabWidth": 4,
     "useTabs": false,
     "singleQuote": false,
-    "endOfLine": "lf",
+    "endOfLine": "crlf",
     "semi": true
 }
