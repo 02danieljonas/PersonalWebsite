@@ -35,5 +35,12 @@
                 "namedComponents": "function-declaration"
             }
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": ["cypress/**/*.ts"],
+            "parserOptions": { "project": null }
+        }
+    ]
 }
+
