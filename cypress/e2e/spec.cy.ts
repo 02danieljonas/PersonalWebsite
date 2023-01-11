@@ -6,6 +6,6 @@ describe("empty spec", () => {
 
 describe("My First Test", () => {
     it("Does not do much!", () => {
-        expect(false).to.equal(false);
+        expect(true).to.equal(false);
     });
 });
