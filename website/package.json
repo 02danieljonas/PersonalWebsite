@@ -6,9 +6,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "tsc && npx next lint && npm run prettier",
-        "format": "eslint --fix ./**/*.{ts,tsx,js} && prettier --write ./**/*.{ts,tsx,js}",
-        "prettier": "prettier --check ./**/*.{ts,tsx,js}"
+        "lint": "tsc && pnpx next lint && pnpm run prettier",
+        "format": "eslint --fix ./**/*.{ts,tsx,js,css} && prettier --write ./**/*.{ts,tsx,js,scss,css,md,json}",
+        "prettier": "prettier --check ./**/*.{ts,tsx,js,scss,css,md,json}"
     },
     "dependencies": {
         "next": "13.0.6",
