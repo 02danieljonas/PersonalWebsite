@@ -49,7 +49,7 @@ jobs:
               run: pnpm install
 
             - name: Test with cypress
-              run: pnpm test
+              run: pnpm test:headless
 
             - name: Check linting and formatting
               run: pnpm lint
