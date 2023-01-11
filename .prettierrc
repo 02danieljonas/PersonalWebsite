@@ -2,7 +2,6 @@
     "tabWidth": 4,
     "useTabs": false,
     "singleQuote": false,
-    "endOfLine": "crlf",
     "semi": true,
     "trailingComma": "none"
 }
