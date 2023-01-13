@@ -4,10 +4,12 @@ on:
     push:
         branches:
             - main
+            - dev
             - github-workflow
     pull_request:
         branches:
             - main
+            - dev
             - github-workflow
 
 jobs:
