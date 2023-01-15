@@ -1,12 +1,7 @@
-name: continuous integration
+name: Continuous Integration Pushes
 
 on:
     push:
-        branches:
-            - main
-            - dev
-            - github-workflow
-    pull_request:
         branches:
             - main
             - dev
@@ -55,6 +50,3 @@ jobs:
 
             - name: Test with cypress
               run: pnpm test:headless
-
-            - name: Build application
-              run: pnpm build
