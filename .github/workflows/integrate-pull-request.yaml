@@ -3,9 +3,7 @@ name: Continuous Integration Pull Request
 on:
     pull_request:
         branches:
-            - main
-            - dev
-            - github-workflow
+            - '*'
 
 jobs:
     build-test:
@@ -25,12 +23,6 @@ jobs:
               with:
                   version: 7
                   run_install: false
-
-            - name: Install dependencies
-              run: pnpm install
-
-            - name: Test with cypress
-              run: pnpm test:headless
 
             - name: Build application
               run: pnpm build

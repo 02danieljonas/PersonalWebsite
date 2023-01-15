@@ -3,10 +3,7 @@ name: Continuous Integration Pushes
 on:
     push:
         branches:
-            - main
-            - dev
-            - github-workflow
-
+            - '*'
 jobs:
     build-test:
         runs-on: ubuntu-latest
