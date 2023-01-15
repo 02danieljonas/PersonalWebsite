@@ -1,14 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type WebsiteObject = {
     name: string;
+    admin: boolean;
     icon: string; // pathToIcon
 };
 
 type WebsiteFile = {
     name: string;
     admin: boolean;
-    location?: "";
+    location?: string;
     icon: string | "fileIcon";
     content: string;
 };
@@ -27,6 +27,7 @@ type WebsiteFolder = {
     contents: (WebsiteFolder | WebsiteFile | WebsiteApp)[] | undefined;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const C: WebsiteFolder = {
     name: "C:",
     admin: true,
