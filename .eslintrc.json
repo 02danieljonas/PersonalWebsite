@@ -22,7 +22,7 @@
     ],
     "rules": {
         "indent": ["error", 4],
-        "arrow-body-style": "warn",
+        "arrow-body-style": "off",
         "no-console": "warn",
         "import/no-named-default": "error",
         "react/react-in-jsx-scope": "off",
@@ -31,7 +31,7 @@
         "react/function-component-definition": [
             "warn",
             {
-                "namedComponents": "function-declaration"
+                "namedComponents": "arrow-function"
             }
         ]
     },
