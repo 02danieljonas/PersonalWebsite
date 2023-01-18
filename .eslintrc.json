@@ -24,15 +24,16 @@
         "indent": ["error", 4],
         "arrow-body-style": "off",
         "no-console": "warn",
-        "no-plusplus":"off",
+        "no-plusplus": "off",
         "import/no-named-default": "error",
+        "react/require-default-props": "off",
         "react/react-in-jsx-scope": "off",
         "quotes": ["warn", "double"],
         "semi": ["error", "always"],
         "react/function-component-definition": [
             "warn",
             {
-                "namedComponents": "arrow-function"
+                "namedComponents": "function-declaration"
             }
         ]
     },

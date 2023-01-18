@@ -21,11 +21,13 @@
     },
     "include": [
         "next-env.d.ts",
+        ".next/types/**/*.ts",
+        "**/*.d.ts",
         "**/*.ts",
         "**/*.tsx",
         "next.config.js",
         "postcss.config.js",
         "tailwind.config.js"
     ],
-    "exclude": ["node_modules", "cypress"]
+    "exclude": ["node_modules", "<tsconfigRootDir>/cypress/**/*"]
 }
