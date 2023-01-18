@@ -1,6 +1,5 @@
 import KNumerals from "./KNumerals";
 
-
 describe("KNumeral testing", () => {
     it("KNumeral is visible, has proper sizing and", () => {
         cy.mount(<KNumerals height={400} />);
