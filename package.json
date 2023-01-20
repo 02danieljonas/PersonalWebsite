@@ -8,8 +8,12 @@
         "start": "next start",
         "lint": "tsc && pnpx next lint && pnpm run prettier",
         "format": "eslint --fix ./**/*.{ts,tsx,js,css} && prettier --write ./**/*.{ts,tsx,js,scss,css,md,json}",
-        "test": "cypress run --headed",
-        "test:headless": "cypress run",
+        "test": "pnpm test:e | pnpm test:c",
+        "test:c": "cypress run --headed --component",
+        "test:e": "cypress run --headed",
+        "test:headless": "pnpm test:headless:e | pnpm test:headless:c",
+        "test:headless:c": "cypress run --component",
+        "test:headless:e": "cypress run",
         "prettier": "prettier --check ./**/*.{ts,tsx,js,scss,css,md,json}"
     },
     "dependencies": {
