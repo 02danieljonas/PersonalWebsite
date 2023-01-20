@@ -29,7 +29,6 @@
         "react/require-default-props": "off",
         "react/react-in-jsx-scope": "off",
         "quotes": ["warn", "double"],
-        "semi": ["error", "always"],
         "react/function-component-definition": [
             "warn",
             {
