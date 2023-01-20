@@ -16,17 +16,14 @@ function Base20ToSVG({ value = 0, height }: KNumeralsProps) {
     );
 }
 
-export default function KNumerals({ value = 0, height }: KNumeralsProps) {
-    const toBase20: (decimal: number, binary?: number[]) => number[] = (
-        decimal,
-        binary = []
-    ) => {
-        if (decimal === 0) {
-            return binary;
-        }
-        return toBase20(Math.floor(decimal / 20), [decimal % 20, ...binary]);
-    };
+export function toBase20(decimal: number, binary: number[] = []): number[] {
+    if (decimal === 0) {        
+        return binary;
+    }
+    return toBase20(Math.floor(decimal / 20), [decimal % 20, ...binary]);
+}
 
+export default function KNumerals({ value = 0, height }: KNumeralsProps) {
     let kNumeralsList: number[] = toBase20(value);
     if (kNumeralsList.length === 0) {
         kNumeralsList = [0];
