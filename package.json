@@ -11,6 +11,7 @@
         "test": "pnpm test:e | pnpm test:c",
         "test:c": "cypress run --headed --component",
         "test:e": "cypress run --headed",
+        "test:h": "pnpm test:headless",
         "test:headless": "pnpm test:headless:e | pnpm test:headless:c",
         "test:headless:c": "cypress run --component",
         "test:headless:e": "cypress run",
