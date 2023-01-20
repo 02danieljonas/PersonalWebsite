@@ -1,9 +1,9 @@
 import KNumerals, { toBase20 } from "./KNumerals";
 
 describe("Testing toBase20 function", () => {
-    // it("Fails", () => {
-    //     expect(false).to.eq(true);
-    // });
+    it("Fails", () => {
+        expect(false).to.eq(true);
+    });
     const checkArrayEquality = (arr1: number[], arr2: number[]) => {
         it("Are the two variables arrays", () => {
             expect(Array.isArray(arr1)).to.eq(true);
