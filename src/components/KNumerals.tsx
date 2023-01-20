@@ -17,7 +17,7 @@ function Base20ToSVG({ value = 0, height }: KNumeralsProps) {
 }
 
 export function toBase20(decimal: number, binary: number[] = []): number[] {
-    if (decimal === 0) {        
+    if (decimal === 0) {
         return binary;
     }
     return toBase20(Math.floor(decimal / 20), [decimal % 20, ...binary]);

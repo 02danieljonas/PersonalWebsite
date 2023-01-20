@@ -22,7 +22,7 @@ describe("Testing toBase20 function", () => {
             [0, 3, 4, 6, 8, 1, 3, 5, 2, 6, 8, 1, 12, 12345667788990],
             [0, 3, 4, 6, 8, 1, 3, 5, 2, 6, 8, 1, 12, 12345667788990]
         );
-        checkArrayEquality([], [])
+        checkArrayEquality([], []);
         checkArrayEquality(
             [
                 12, 543, 75, 123, 654, 56, 32, 45, 657, 34, 2326, 234, 347,
