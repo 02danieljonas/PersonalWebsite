@@ -1,5 +1,5 @@
 import React from "react";
-import KNumerals from "../components/KNumerals/KNumerals";
+import KNumerals from "../components/KNumerals";
 
 const test = () => {
     return (
