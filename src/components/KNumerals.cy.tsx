@@ -79,11 +79,26 @@ describe("KNumeral testing", () => {
             .should("have.css", "width", "250px")
             .should("have.attr", "src", "/static/k_numerals/0.svg");
     });
-    it("KNumeral Container should be properly displayed", () => {
+    it("KNumeral Container should be properly displayed for 9876543210", () => {
         cy.mount(<KNumerals value={9876543210} height={50} />);
         cy.get("#KNumerals-container")
             .should("have.css", "display", "flex")
             .should("have.css", "flex-wrap", "nowrap")
-            .should("have.css", "background-color", "rgba(0, 0, 0, 0)");
+            .should("have.css", "background-color", "rgba(0, 0, 0, 0)")
+            .children()
+            .should("have.length", 8)
+            .siblings("img")
+            .should("have.length", 8);
+    });
+    it("KNumeral Container should be properly displayed for 928394237492", () => {
+        cy.mount(<KNumerals value={928394237492} height={50} />);
+        cy.get("#KNumerals-container")
+            .should("have.css", "display", "flex")
+            .should("have.css", "flex-wrap", "nowrap")
+            .should("have.css", "background-color", "rgba(0, 0, 0, 0)")
+            .children()
+            .should("have.length", 10)
+            .siblings("img")
+            .should("have.length", 10);
     });
 });
