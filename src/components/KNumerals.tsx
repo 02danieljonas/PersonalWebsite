@@ -5,10 +5,17 @@ type KNumeralsProps = {
     height: number;
 };
 
-function Base20ToSVG({ value = 0, height }: KNumeralsProps) {
+interface Base20ToSVGProps {
+    value?: number;
+    height: number;
+    id?: number;
+}
+
+function Base20ToSVG({ value = 0, height, id = 0 }: Base20ToSVGProps) {
     return (
         <Image
             src={`/static/k_numerals/${value}.svg`}
+            key={id}
             alt="K numerals"
             width={height / 1.6}
             height={height}
@@ -30,9 +37,12 @@ export default function KNumerals({ value = 0, height }: KNumeralsProps) {
     }
 
     return (
-        <div>
-            {kNumeralsList.map((e) => (
-                <Base20ToSVG value={e} height={height} />
+        <div
+            id="KNumerals-container"
+            className="flex flex-nowrap p-1 w-fit bg-transparent"
+        >
+            {kNumeralsList.map((e, i) => (
+                <Base20ToSVG value={e} height={height} id={i} key={i} />
             ))}
         </div>
     );
