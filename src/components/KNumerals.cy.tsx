@@ -62,7 +62,7 @@ describe("Testing toBase20 function", () => {
     );
 });
 describe("KNumeral testing", () => {
-    it("KNumeral should be 12", () => {
+    it("KNumeral should be 12 and have proper css values", () => {
         cy.mount(<KNumerals value={12} height={100} />);
         cy.get("img")
             .should("be.visible")
@@ -71,12 +71,19 @@ describe("KNumeral testing", () => {
             .should("have.attr", "src", "/static/k_numerals/12.svg");
     });
 
-    it("KNumeral is visible, has proper sizing and", () => {
+    it("KNumeral should be 0 and have proper css values", () => {
         cy.mount(<KNumerals height={400} />);
         cy.get("img")
             .should("be.visible")
             .should("have.css", "height", "400px")
             .should("have.css", "width", "250px")
             .should("have.attr", "src", "/static/k_numerals/0.svg");
+    });
+    it("KNumeral Container should be properly displayed", () => {
+        cy.mount(<KNumerals value={9876543210} height={50} />);
+        cy.get("#KNumerals-container")
+            .should("have.css", "display", "flex")
+            .should("have.css", "flex-wrap", "nowrap")
+            .should("have.css", "background-color", "rgba(0, 0, 0, 0)");
     });
 });
