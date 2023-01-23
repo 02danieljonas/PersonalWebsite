@@ -10,13 +10,15 @@ export default function ApplicationBottom({
 }: // height
 ApplicationBottomProps) {
     return (
-        // <div className="h-full disable-drag bg-slate-500 flex-grow">
-        <iframe
-            className="flex-grow h-full rounded-b"
-            // height={height}
-            title={appName}
-            src={appUrl}
-        />
-        // </div>
+        <div className=" bg-slate-300 flex-grow flex rounded-b">
+            {/* // flex-grow */}
+            {/* // h-[100%-32px] */}
+            <iframe
+                className=" w-full flex-grow top-0 bottom-0-0 rounded-b"
+                // height="100%-32px"
+                title={appName}
+                src={appUrl}
+            />
+        </div>
     );
 }
