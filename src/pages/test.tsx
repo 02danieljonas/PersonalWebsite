@@ -1,10 +1,10 @@
 import React from "react";
-import KNumerals from "../components/KNumerals";
+import ApplicationContainer from "../components/ApplicationContainer";
 
 const test = () => {
     return (
-        <div className="bg-white">
-            <KNumerals value={9876543210} height={18} />
+        <div className="test bg-slate-500 w-screen h-screen">
+            <ApplicationContainer appName="Test" appIcon="/static/icons/test.svg" />
         </div>
     );
 };
