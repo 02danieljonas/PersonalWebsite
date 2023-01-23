@@ -3,7 +3,7 @@ import KNumerals from "../components/KNumerals";
 
 const test = () => {
     return (
-        <div className="bg-white w-full">
+        <div className="absolute bg-white h-full">
             <KNumerals value={9876543210} height={18} />
         </div>
     );
