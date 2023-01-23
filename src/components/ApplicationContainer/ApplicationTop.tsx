@@ -21,8 +21,10 @@ export default function ApplicationTop({ appIcon, appName }: ApplicationTopProps
                 />
                 <div className="m-auto">{appName}</div>
             </div>
-            <div id="title-bar-icon" className="">
-                hello
+            <div id="title-bar-icon" className="flex">
+                <Image alt="minimize icon" width={30} height={30} src="/static/title_bar_icons/minimize.svg" />
+                <Image alt="maximize icon" width={30} height={30} src="/static/title_bar_icons/maximize.svg" />
+                <Image alt="close icon" width={30} height={30} src="/static/title_bar_icons/close.svg" />
             </div>
         </div>
     );
