@@ -14,15 +14,14 @@ export default function ApplicationContainer({
     appUrl
 }: ApplicationContainerProps) {
     return (
-        <Rnd className="w-96 h-96">
+        <Rnd
+            className="w-96 h-96"
+            minWidth={300}
+            minHeight={400}
+            bounds="parent"
+            cancel="disable-drag"
+        >
             <div className="w-full h-full bg-gray-800 flex flex-col rounded-lg">
-                {/* bounds="parent" */}
-                {/* // className="application bg-gray-900 rounded flex grow flex-col" */}
-                {/* // cancel=".disable-drag" */}
-                {/* // defaultClassName="" */}
-                {/* // minWidth="300px" */}
-                {/* // minHeight="400px" */}
-                {/* > */}
                 <ApplicationTop appIcon={appIcon} appName={appName} />
                 <ApplicationBottom appName="Name" appUrl={appUrl} />
             </div>
