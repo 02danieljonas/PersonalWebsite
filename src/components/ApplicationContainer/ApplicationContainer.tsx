@@ -1,5 +1,5 @@
-import { Rnd } from "react-rnd";
-import Draggable from "react-draggable";
+// import { Rnd } from "react-rnd";
+// import Draggable from "react-draggable";
 import ApplicationTop from "./ApplicationTop";
 import ApplicationBottom from "./ApplicationBottom";
 
@@ -13,7 +13,7 @@ export default function ApplicationContainer({
     appIcon
 }: ApplicationContainerProps) {
     return (
-        <div className="w-3/4 h-3/4 bg-gray-800 flex flex-col">
+        <div className="w-64 h-64 bg-gray-800 flex flex-col rounded-lg">
             {/* <Draggable */}
             {/* bounds="parent" */}
             {/* // className="application bg-gray-900 rounded flex grow flex-col" */}
