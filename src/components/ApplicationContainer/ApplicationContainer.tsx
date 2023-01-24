@@ -15,11 +15,11 @@ export default function ApplicationContainer({
 }: ApplicationContainerProps) {
     return (
         <Rnd
-            className="w-96 h-96"
-            minWidth={300}
-            minHeight={400}
+            className="w-96 h-96 min-h-[400] min-w-[300]"
+            minWidth={100}
+            minHeight={100}
             bounds="parent"
-            cancel="disable-drag"
+            cancel=".disable-drag"
         >
             <div className="w-full h-full bg-gray-800 flex flex-col rounded-lg">
                 <ApplicationTop appIcon={appIcon} appName={appName} />
