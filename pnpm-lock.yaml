@@ -7,6 +7,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.45.1
   '@typescript-eslint/parser': ^5.45.1
   autoprefixer: ^10.4.13
+  csstype: ^3.1.1
   cypress: ^12.2.0
   eslint: 8.29.0
   eslint-config-airbnb: ^19.0.4
@@ -43,6 +44,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.47.0_c98a5d74270cee68b3830ddfef17652f
   '@typescript-eslint/parser': 5.47.0_eslint@8.29.0+typescript@4.9.4
   autoprefixer: 10.4.13_postcss@8.4.20
+  csstype: 3.1.1
   cypress: 12.2.0
   eslint: 8.29.0
   eslint-config-airbnb: 19.0.4_a7a3fb3310365aea69eb17b04f7efa55

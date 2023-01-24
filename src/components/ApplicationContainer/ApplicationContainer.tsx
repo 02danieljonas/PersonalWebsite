@@ -6,7 +6,7 @@ type ApplicationContainerProps = {
     appName: string;
     appIcon: string;
     appUrl: string;
-    onClose: ()=>null;
+    onClose: () => null;
 };
 
 export default function ApplicationContainer({
@@ -20,12 +20,15 @@ export default function ApplicationContainer({
             className="w-[500] h-[300]"
             minWidth={100}
             minHeight={100}
-            onDrag={(e)=>console.log(e)}
             bounds="parent"
             cancel=".disable-drag"
         >
             <div className="w-full h-full bg-black gap-0 flex flex-col rounded-lg">
-                <ApplicationTop appIcon={appIcon} appName={appName} onClose={onClose} />
+                <ApplicationTop
+                    appIcon={appIcon}
+                    appName={appName}
+                    onClose={onClose}
+                />
                 <ApplicationBottom appName="Name" appUrl={appUrl} />
             </div>
         </Rnd>
