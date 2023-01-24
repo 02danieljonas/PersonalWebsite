@@ -1,20 +1,24 @@
 import Image from "next/image";
+import type { Property } from "csstype";
 
 type ApplicationTopProps = {
     appIcon: string;
     appName: string;
-    onClose: ()=>null;
+    onClose: () => null;
+    titleBarColor?: Property.BackgroundColor;
 };
 
 export default function ApplicationTop({
     appIcon,
     appName,
-    onClose
+    onClose,
+    titleBarColor = "gray"
 }: ApplicationTopProps) {
     return (
         <div
             id="top"
-            className="h-8 cancel bg-cyan-500 rounded-t flex justify-between px-2"
+            className="h-8 cancel rounded-t flex justify-between px-2"
+            style={{ backgroundColor: titleBarColor }}
         >
             <div id="app-data" className="flex gap-1">
                 <Image
@@ -26,17 +30,22 @@ export default function ApplicationTop({
                 />
                 <div className="m-auto">{appName}</div>
             </div>
-            <div id="title-bar-icon" className="flex">
+            <div
+                id="title-bar-icon"
+                className="flex gap-3 disable-drag cursor-auto"
+            >
                 <Image
                     alt="minimize icon"
                     width={30}
                     height={30}
+                    className="cursor-pointer"
                     src="/static/title_bar_icons/minimize.svg"
                 />
                 <Image
                     alt="maximize icon"
                     width={30}
                     height={30}
+                    className="cursor-pointer"
                     src="/static/title_bar_icons/maximize.svg"
                 />
                 <Image
@@ -44,6 +53,7 @@ export default function ApplicationTop({
                     width={30}
                     height={30}
                     onClick={onClose}
+                    className="cursor-pointer"
                     src="/static/title_bar_icons/close.svg"
                 />
             </div>
