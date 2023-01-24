@@ -14,7 +14,7 @@ ApplicationBottomProps) {
             {/* // flex-grow */}
             {/* // h-[100%-32px] */}
             <iframe
-                className=" w-full flex-grow top-0 bottom-0-0 border-none rounded-b-lg focus-visible:outline-none"
+                className=" w-full h-full flex-grow top-0 bottom-0-0 border-none rounded-b-lg focus-visible:outline-none"
                 // height="100%-32px"
                 title={appName}
                 src={appUrl}

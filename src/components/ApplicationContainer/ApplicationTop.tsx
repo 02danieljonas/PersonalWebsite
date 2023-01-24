@@ -3,11 +3,13 @@ import Image from "next/image";
 type ApplicationTopProps = {
     appIcon: string;
     appName: string;
+    onClose: ()=>null;
 };
 
 export default function ApplicationTop({
     appIcon,
-    appName
+    appName,
+    onClose
 }: ApplicationTopProps) {
     return (
         <div
@@ -41,6 +43,7 @@ export default function ApplicationTop({
                     alt="close icon"
                     width={30}
                     height={30}
+                    onClick={onClose}
                     src="/static/title_bar_icons/close.svg"
                 />
             </div>
