@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
-    experimental:{
+    experimental: {
         appDir: true
     }
 };
