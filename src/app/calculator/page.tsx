@@ -1,18 +1,12 @@
 import React from "react";
-import Button from "./Button";
-
-function ButtonGrid() {
-    return (
-        <div className="">
-            <Button />
-            <Button />
-            <Button />
-            <Button />
-            <Button />
-        </div>
-    );
-}
+import Bottom from "./(Bottom)";
+import Top from "./(Top)";
 
 export default function page() {
-    return <ButtonGrid />;
+    return (
+        <div className="flex flex-col h-screen">
+            <Top />
+            <Bottom />
+        </div>
+    );
 }
