@@ -4,14 +4,18 @@ import React, { useEffect, useState } from "react";
 import KeyPad from "./(KeyPad)";
 import Display from "./(Display)";
 
-export default function page() {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [inputValues, setInputValues] = useState<string[]>([]);
+export default function Page() {
+    const [formattedExpression, setFormattedExpression] = useState<string[]>(
+        []
+    );
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+    console.log(formattedExpression);
+    
+
+    const [expression, setExpression] = useState<string>("");
+
     // const [tempValue, setTempValue] = useState<string>("");
-
-    const validKeys = new Set([
+    const validValues = new Set([
         "1",
         "2",
         "3",
@@ -33,36 +37,40 @@ export default function page() {
         "+",
         ".",
         "/",
-        "|",
-        "Enter",
-        "C",
-        "c",
-        "Delete",
-        "Backspace"
+        "|"
     ]);
 
+    const validKeys = new Set(["C", "c", "Delete", "Backspace", "Enter"]);
+
     const handleKeyPress = (e: string) => {
-        if (validKeys.has(e)) {
-            console.log(`${e} is in ${Array.from(validKeys)}`);
+        if (validValues.has(e)) {
+            //if its a number add it to the 
+            setExpression((prev) => prev + e);
+        } else if (validKeys.has(e)) {
+            console.log(e);
         }
     };
-    const handleKeydown = (e: KeyboardEvent) => {
-        handleKeyPress(e.key);
-    };
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const handleAdd = (e: string) => {};
+
     useEffect(() => {
+        const handleKeydown = (e: KeyboardEvent) => {
+            e.preventDefault();
+            handleKeyPress(e.key);
+        };
         document.addEventListener("keydown", handleKeydown);
         return () => {
             document.removeEventListener("keydown", handleKeydown);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <div className="flex flex-col h-screen">
             <Display
-                inputValues={inputValues}
-                setInputValues={setInputValues}
+                expression={expression}
+                inputValues={formattedExpression}
+                setInputValues={setFormattedExpression}
             />
             <KeyPad handleKeyPress={handleKeyPress} />
         </div>
