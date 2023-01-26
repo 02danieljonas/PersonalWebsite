@@ -13,7 +13,7 @@ export default function Display({ inputValues, setInputValues }: DisplayProps) {
     return (
         <div>
             <PrimaryDisplay inputValues={inputValues} setInputValues={setInputValues} />
-            <SecondaryDisplay inputValues={inputValues} setInputValues={setInputValues} />
+            <SecondaryDisplay inputValues={inputValues} />
         </div>
     );
 }

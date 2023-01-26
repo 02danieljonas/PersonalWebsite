@@ -7,6 +7,7 @@ import Display from "./(Display)";
 export default function page() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [inputValues, setInputValues] = useState<string[]>([]);
+    
     // eslint-disable-next-line react-hooks/rules-of-hooks
     // const [tempValue, setTempValue] = useState<string>("");
 
