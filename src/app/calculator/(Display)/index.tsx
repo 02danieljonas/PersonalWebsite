@@ -1,22 +1,19 @@
 "use client";
 
 import React from "react";
+import PrimaryDisplay from "./PrimaryDisplay";
+import SecondaryDisplay from "./SecondaryDisplay";
 
-type IndexProps = {
+type DisplayProps = {
     inputValues: string[];
     setInputValues: React.Dispatch<React.SetStateAction<string[]>>;
 };
 
-export default function Index({ inputValues, setInputValues }: IndexProps) {
+export default function Display({ inputValues, setInputValues }: DisplayProps) {
     return (
         <div>
-            <input
-                type="text"
-                onChange={(e) => setInputValues([e.target.value])}
-                value={inputValues[0]}
-            />
-            {inputValues}
-            index
+            <PrimaryDisplay inputValues={inputValues} setInputValues={setInputValues} />
+            <SecondaryDisplay inputValues={inputValues} setInputValues={setInputValues} />
         </div>
     );
 }
