@@ -25,6 +25,7 @@
         "arrow-body-style": "off",
         "no-console": "warn",
         "no-plusplus": "off",
+        "spaced-comment": "off",
         "import/no-named-default": "error",
         "react/require-default-props": "off",
         "react/no-array-index-key": "off",
