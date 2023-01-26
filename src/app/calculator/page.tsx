@@ -7,7 +7,7 @@ import Display from "./(Display)";
 export default function page() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [inputValues, setInputValues] = useState<string[]>([]);
-    
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
     // const [tempValue, setTempValue] = useState<string>("");
 
@@ -38,7 +38,7 @@ export default function page() {
         "C",
         "c",
         "Delete",
-        "Backspace",
+        "Backspace"
     ]);
 
     const handleKeyPress = (e: string) => {
@@ -46,9 +46,9 @@ export default function page() {
             console.log(`${e} is in ${Array.from(validKeys)}`);
         }
     };
-    const handleKeydown= (e: KeyboardEvent)=>{
-        handleKeyPress(e.key)
-    }
+    const handleKeydown = (e: KeyboardEvent) => {
+        handleKeyPress(e.key);
+    };
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
@@ -64,7 +64,7 @@ export default function page() {
                 inputValues={inputValues}
                 setInputValues={setInputValues}
             />
-            <KeyPad handleKeyPress={handleKeyPress}  />
+            <KeyPad handleKeyPress={handleKeyPress} />
         </div>
     );
 }

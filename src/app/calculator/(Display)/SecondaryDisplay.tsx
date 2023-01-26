@@ -5,7 +5,7 @@ type SecondaryDisplayProps = {
 };
 
 export default function SecondaryDisplay({
-    inputValues,
+    inputValues
 }: SecondaryDisplayProps) {
     return <div>SecondaryDisplay: {inputValues}</div>;
 }

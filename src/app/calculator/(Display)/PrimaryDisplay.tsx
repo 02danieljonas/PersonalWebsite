@@ -16,7 +16,7 @@ export default function PrimaryDisplay({
                 type="text"
                 onChange={(e) => {
                     console.log(e);
-                    
+
                     setInputValues([e.target.value]);
                 }}
                 value={inputValues[0]}

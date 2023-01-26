@@ -2,10 +2,9 @@ import Button from "./Button";
 
 type ButtonGridProps = {
     handleKeyPress: (e: string) => void;
-}
+};
 
-export default function ButtonGrid({handleKeyPress}:ButtonGridProps) {
-
+export default function ButtonGrid({ handleKeyPress }: ButtonGridProps) {
     const y = [
         ["7", "7"],
         ["8", "8"],
@@ -31,7 +30,11 @@ export default function ButtonGrid({handleKeyPress}:ButtonGridProps) {
     return (
         <div className="grid gap-4 m-4 grid-cols-5 flex-grow">
             {y.map(([face, value]) => (
-                <Button key={face} onClick={()=>handleKeyPress(value)} value={face} />
+                <Button
+                    key={face}
+                    onClick={() => handleKeyPress(value)}
+                    value={face}
+                />
             ))}
         </div>
     );
