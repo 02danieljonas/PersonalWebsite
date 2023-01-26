@@ -24,7 +24,7 @@ export default function ButtonGrid() {
         "="
     ];
     return (
-        <div className="grid grid-cols-5 flex-grow">
+        <div className="grid gap-4 m-4 grid-cols-5 flex-grow">
             {y.map((e) => (
                 <Button key={e} value={e} />
             ))}
