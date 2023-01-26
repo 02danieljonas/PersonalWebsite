@@ -33,7 +33,11 @@ export default function page() {
         ".",
         "/",
         "|",
-        "Enter"
+        "Enter",
+        "C",
+        "c",
+        "Delete",
+        "Backspace",
     ]);
 
     const handleKeyPress = (e: string) => {
