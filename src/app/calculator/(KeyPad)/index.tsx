@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Button from "./Button";
 
 type ButtonGridProps = {
@@ -27,12 +28,26 @@ export default function ButtonGrid({ handleKeyPress }: ButtonGridProps) {
         ["C", "C"],
         ["=", "="]
     ];
+
+    
+    useEffect(() => {
+        const handleKeydown = (e: KeyboardEvent) => {            
+            document.getElementById(e.key)?.click()
+        };
+        document.addEventListener("keydown", handleKeydown);
+        return () => {
+            document.removeEventListener("keydown", handleKeydown);
+        };
+    }, []);
+
     return (
         <div className="grid gap-4 m-4 grid-cols-5 flex-grow">
             {y.map(([face, value]) => (
                 <Button
                     key={face}
-                    onClick={() => handleKeyPress(value)}
+                    onClick={() => {                        
+                        handleKeyPress(value)}
+                    }
                     value={face}
                 />
             ))}

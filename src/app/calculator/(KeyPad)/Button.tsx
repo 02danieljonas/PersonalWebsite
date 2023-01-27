@@ -10,6 +10,7 @@ export default function Button({ value, onClick }: ButtonProps) {
     return (
         <button
             type="button"
+            id={value}
             onClick={onClick}
             className={ButtonStyles.pushable}
         >

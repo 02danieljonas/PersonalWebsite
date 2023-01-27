@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import KeyPad from "./(KeyPad)";
 import Display from "./(Display)";
 
@@ -9,12 +9,8 @@ export default function Page() {
         []
     );
 
-    console.log(formattedExpression);
-    
+    const [tempValue, setTempValue] = useState<string>("");
 
-    const [expression, setExpression] = useState<string>("");
-
-    // const [tempValue, setTempValue] = useState<string>("");
     const validValues = new Set([
         "1",
         "2",
@@ -44,31 +40,25 @@ export default function Page() {
 
     const handleKeyPress = (e: string) => {
         if (validValues.has(e)) {
-            //if its a number add it to the 
-            setExpression((prev) => prev + e);
+            if (/\d/.test(e)) {
+                setTempValue((prev) => prev + e);
+            } else {
+                console.log(tempValue);
+                
+                setFormattedExpression((prev) => [...prev, tempValue, e]);
+                setTempValue("");
+            }
+            // setExpression((prev) => prev + e);
         } else if (validKeys.has(e)) {
             console.log(e);
         }
     };
 
-    const handleAdd = (e: string) => {};
-
-    useEffect(() => {
-        const handleKeydown = (e: KeyboardEvent) => {
-            e.preventDefault();
-            handleKeyPress(e.key);
-        };
-        document.addEventListener("keydown", handleKeydown);
-        return () => {
-            document.removeEventListener("keydown", handleKeydown);
-        };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
     return (
         <div className="flex flex-col h-screen">
+            tempValue: {tempValue} <br />
+            formattedExpression: {formattedExpression.toString()}
             <Display
-                expression={expression}
                 inputValues={formattedExpression}
                 setInputValues={setFormattedExpression}
             />

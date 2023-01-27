@@ -11,14 +11,7 @@ export default function PrimaryDisplay({
 }: PrimaryProps) {
     return (
         <div>
-            PrimaryDisplay:
-            <input
-                type="text"
-                onChange={(e) => {
-                    setInputValues([e.target.value]);
-                }}
-                value={inputValues[0]}
-            />
+            PrimaryDisplay: {inputValues}
         </div>
     );
 }
