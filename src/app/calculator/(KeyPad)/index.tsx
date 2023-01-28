@@ -21,8 +21,8 @@ export default function ButtonGrid() {
         "",
         "",
         "",
-        "",
-    ]
+        ""
+    ];
     // useEffect(() => {
     //     document.addEventListener("keydown", handleKeydown);
     //     return () => {

@@ -5,12 +5,9 @@ type ButtonProps = {
     child: string;
 };
 
-export default function Button({child}: ButtonProps) {
+export default function Button({ child }: ButtonProps) {
     return (
-        <button
-            type="button"
-            className={ButtonStyles.pushable}
-        >
+        <button type="button" className={ButtonStyles.pushable}>
             <span className={ButtonStyles.shadow} />
             <span className={ButtonStyles.edge} />
             <span className={ButtonStyles.front}>
