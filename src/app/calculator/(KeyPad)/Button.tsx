@@ -2,11 +2,12 @@ import React from "react";
 import ButtonStyles from "../../../styles/Button.module.scss";
 
 type ButtonProps = {
-    value: string;
+    face: string;
     onClick: () => void;
+    value: string
 };
 
-export default function Button({ value, onClick }: ButtonProps) {
+export default function Button({ face, onClick, value }: ButtonProps) {
     return (
         <button
             type="button"
@@ -17,7 +18,7 @@ export default function Button({ value, onClick }: ButtonProps) {
             <span className={ButtonStyles.shadow} />
             <span className={ButtonStyles.edge} />
             <span className={ButtonStyles.front}>
-                <span className={ButtonStyles.text}>{value}</span>
+                <span className={ButtonStyles.text}>{face}</span>
             </span>
         </button>
     );

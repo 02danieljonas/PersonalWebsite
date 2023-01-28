@@ -6,33 +6,32 @@ type ButtonGridProps = {
 };
 
 export default function ButtonGrid({ handleKeyPress }: ButtonGridProps) {
-    const y = [
-        ["7", "7"],
-        ["8", "8"],
-        ["9", "9"],
-        ["y^x", "^"],
-        ["del", "Delete"],
-        ["4", "4"],
-        ["5", "5"],
-        ["6", "6"],
-        ["*", "*"],
-        ["/", "/"],
-        ["1", "1"],
-        ["2", "2"],
-        ["3", "3"],
-        ["+", "+"],
-        ["-", "-"],
-        ["+/-", "+/-"],
-        ["0", "0"],
-        [".", "."],
-        ["C", "C"],
-        ["=", "="]
+    const y: [string, string[]][] = [
+        ["7", ["7"]],
+        ["8", ["8"]],
+        ["9", ["9"]],
+        ["y^x", ["^", "y^x"]],
+        ["del", ["Delete", "del"]],
+        ["4", ["4"]],
+        ["5", ["5"]],
+        ["6", ["6"]],
+        ["*", ["*"]],
+        ["/", ["/"]],
+        ["1", ["1"]],
+        ["2", ["2"]],
+        ["3", ["3"]],
+        ["+", ["+"]],
+        ["-", ["-"]],
+        ["+/-", ["+/-"]],
+        ["0", ["0"]],
+        [".", ["."]],
+        ["C", ["C", "c"]],
+        ["=", ["="]]
     ];
 
-    
     useEffect(() => {
-        const handleKeydown = (e: KeyboardEvent) => {            
-            document.getElementById(e.key)?.click()
+        const handleKeydown = (e: KeyboardEvent) => {
+            document.getElementById(e.key)?.click();
         };
         document.addEventListener("keydown", handleKeydown);
         return () => {
@@ -45,10 +44,11 @@ export default function ButtonGrid({ handleKeyPress }: ButtonGridProps) {
             {y.map(([face, value]) => (
                 <Button
                     key={face}
-                    onClick={() => {                        
-                        handleKeyPress(value)}
-                    }
-                    value={face}
+                    onClick={() => {
+                        handleKeyPress(value[0]);
+                    }}
+                    face={face}
+                    value={value.join(" ")}
                 />
             ))}
         </div>
