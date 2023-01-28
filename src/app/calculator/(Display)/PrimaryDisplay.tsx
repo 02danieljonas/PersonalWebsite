@@ -1,17 +1,9 @@
 import React from "react";
 
-type PrimaryProps = {
-    inputValues: string[];
-    setInputValues: React.Dispatch<React.SetStateAction<string[]>>;
-};
-
-export default function PrimaryDisplay({
-    inputValues,
-    setInputValues
-}: PrimaryProps) {
+export default function PrimaryDisplay() {
     return (
         <div>
-            PrimaryDisplay: {inputValues}
+            PrimaryDisplay:
         </div>
     );
 }

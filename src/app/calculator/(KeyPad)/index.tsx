@@ -1,55 +1,39 @@
-import { useEffect } from "react";
 import Button from "./Button";
 
-type ButtonGridProps = {
-    handleKeyPress: (e: string) => void;
-};
-
-export default function ButtonGrid({ handleKeyPress }: ButtonGridProps) {
-    const y: [string, string[]][] = [
-        ["7", ["7"]],
-        ["8", ["8"]],
-        ["9", ["9"]],
-        ["y^x", ["^", "y^x"]],
-        ["del", ["Delete", "del"]],
-        ["4", ["4"]],
-        ["5", ["5"]],
-        ["6", ["6"]],
-        ["*", ["*"]],
-        ["/", ["/"]],
-        ["1", ["1"]],
-        ["2", ["2"]],
-        ["3", ["3"]],
-        ["+", ["+"]],
-        ["-", ["-"]],
-        ["+/-", ["+/-"]],
-        ["0", ["0"]],
-        [".", ["."]],
-        ["C", ["C", "c"]],
-        ["=", ["="]]
-    ];
-
-    useEffect(() => {
-        const handleKeydown = (e: KeyboardEvent) => {
-            document.getElementById(e.key)?.click();
-        };
-        document.addEventListener("keydown", handleKeydown);
-        return () => {
-            document.removeEventListener("keydown", handleKeydown);
-        };
-    }, []);
+export default function ButtonGrid() {
+    const y = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+    // useEffect(() => {
+    //     document.addEventListener("keydown", handleKeydown);
+    //     return () => {
+    //         document.removeEventListener("keydown", handleKeydown);
+    //     };
+    // }, []);
 
     return (
         <div className="grid gap-4 m-4 grid-cols-5 flex-grow">
-            {y.map(([face, value]) => (
-                <Button
-                    key={face}
-                    onClick={() => {
-                        handleKeyPress(value[0]);
-                    }}
-                    face={face}
-                    value={value.join(" ")}
-                />
+            {y.map((e, i) => (
+                <Button key={i} child={`${i}`} />
             ))}
         </div>
     );
